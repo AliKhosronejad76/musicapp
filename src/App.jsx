@@ -1,9 +1,11 @@
+import Layout from "./components/layout"
+
 function App(){
   return(
     <>
-      <h1 className="text-4xl text-center">
-        علی خسرونژاد
-      </h1>
+      <Layout>
+          
+      </Layout>
     </>
   )
 }

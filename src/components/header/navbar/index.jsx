@@ -5,7 +5,7 @@ import { RiSearchLine } from "react-icons/ri"
 
 function Navbar(){
     return(
-        <div className="border-b border-[#e2e2e2] flex items-center justify-between py-3 [&>div]:flex ">
+        <div className="z-10 bg-white w-full border-b border-[#e2e2e2] flex items-center justify-between py-2 [&>div]:flex ">
             <div >
                 <Logo/>
                 <Menu/>

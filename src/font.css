@@ -1,4 +1,14 @@
 @font-face {
+    font-family:narm;
+    src: url("./assets/fonts/Narm.ttf") format("ttf");
+}
+
+.na{
+    font-family:narm !important;
+    font-weight: 900;
+}
+
+@font-face {
     font-family: YekanBakh;
     font-weight: 700;
     src: url("./assets/Fonts/YekanBakh/YekanBakh-Bold/YekanBakh-Bold.eot") format("eot") ,

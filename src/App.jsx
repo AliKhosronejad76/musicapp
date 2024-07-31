@@ -5,7 +5,7 @@ function App(){
     <div className="w-[82%]  mx-auto">
       
       <Layout>
-sfgsgdsfgsfdgs
+
       </Layout>
     </div>
   )

@@ -2,8 +2,8 @@ import Navbar from "./navbar"
 import Banner from "./banner"
 function Header(){
     return(
-        <header>
-            <div className="sticky top-0 transition duration-300">
+        <>
+            <div className="sticky z-[100]  top-0 transition duration-700">
                  <Navbar/> 
             </div>
              <div>
@@ -13,7 +13,7 @@ function Header(){
              </div>
 
 
-        </header>
+        </>
     )
 }
 

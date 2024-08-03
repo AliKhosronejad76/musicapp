@@ -1,13 +1,18 @@
 import Layout from "./components/layout"
+import { BrowserRouter } from "react-router-dom"
+import Router from "./components/router"
 
 function App(){
   return(
-    <div className="w-[82%]  mx-auto">
+    <BrowserRouter>
+      <div className="relative w-[82%]  mx-auto">
+            <Layout>
+              <Router/>
+            </Layout>
       
-      <Layout>
+      </div>
+    </BrowserRouter>
 
-      </Layout>
-    </div>
   )
 }
 

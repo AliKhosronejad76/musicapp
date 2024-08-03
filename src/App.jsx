@@ -5,7 +5,7 @@ import Router from "./components/router"
 function App(){
   return(
     <BrowserRouter>
-      <div className="relative w-[82%]  mx-auto">
+      <div className="relative w-[82%] mx-auto">
             <Layout>
               <Router/>
             </Layout>

@@ -3,6 +3,8 @@ import { BsDownload } from "react-icons/bs"
 import { FaRegCommentDots } from "react-icons/fa6"
 import { CiPlay1 } from "react-icons/ci"
 import { HiMiniArrowLongLeft } from "react-icons/hi2"
+import { Link, useLocation } from "react-router-dom"
+import { useState } from "react"
 
 function PostItem(){
     return(
@@ -11,9 +13,9 @@ function PostItem(){
 
             <div className="flex flex-col items-start mr-4">
                 <div className="flex items-center mb-5">
-                    <a className="ml-5 bg-[#edf7fa] text-sm text-[#3ca5c8] px-2 py-1 rounded-lg">
-                        بادکست
-                    </a>
+                     <a className="ml-5 bg-[#edf7fa] text-sm text-[#3ca5c8] px-2 py-1 rounded-lg">
+                        دسته بندی
+                     </a>
                     <p className="text-sm ">11 مرداد 1399</p>
                 </div>
 
@@ -70,4 +72,12 @@ function Col({icon , count }){
         </div>
     )
 }
+
+
+
+    
+     
+
+  
+
 export default PostItem

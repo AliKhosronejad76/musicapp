@@ -4,7 +4,7 @@ import Pageination from "../../pageination"
 
 function Main(){
     return(
-        <main className="w-[64%] px-2 ">
+        <main className="w-full px-2 ">
             <h1 className="text-bold text-xl mt-4">آخرین ارسالی ها</h1>
        
             <div>

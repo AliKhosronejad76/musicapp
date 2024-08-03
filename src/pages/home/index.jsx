@@ -6,7 +6,6 @@ function Home(){
     return(
         <div className="">
            <div className="flex justify-between pt-6">
-                <Aside/>
                 <Main/>
            </div>
            

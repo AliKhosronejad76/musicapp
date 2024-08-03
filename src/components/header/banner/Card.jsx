@@ -18,8 +18,8 @@ function Card({ img, name , artist , liked , downloaded}){
                 </div>
 
                 <div className="w-1/3 flex items-center justify-center">
-                    <button className="text-white h-[40px] w-[40px] flex items-center justify-center rounded-full bg-[#3100be] shadow-sm">
-                     <CiPlay1 className="text-xl text-center block max-auto text-bold"/>
+                    <button className="text-white h-[37px] w-[37px] flex items-center justify-center rounded-full bg-[#3100be] shadow-sm">
+                     <CiPlay1 className="text-lg text-center block max-auto text-bold"/>
                     </button>
                 </div>
 

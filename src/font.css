@@ -1,0 +1,56 @@
+@font-face {
+    font-family:narm;
+    src: url("./assets/fonts/Narm.ttf") format("ttf");
+}
+
+.na{
+    font-family:narm !important;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: YekanBakh;
+    font-weight: 700;
+    src: url("./assets/Fonts/YekanBakh/YekanBakh-Bold/YekanBakh-Bold.eot") format("eot") ,
+    url("./assets/fonts/YekanBakh/YekanBakh-Bold/YekanBakh-Bold.ttf") format("ttf") , 
+    url("./assets/fonts/YekanBakh/YekanBakh-Bold/YekanBakh-Bold.woff")format("woff");
+}
+
+@font-face {
+    font-family: YekanBakh;
+    font-weight:800;
+    src: url("./assets/fonts/YekanBakh/YekanBakh-Fat/YekanBakh-Fat.eot") format("eot") , 
+     url("./assets/fonts/YekanBakh/YekanBakh-Fat/YekanBakh-Fat.ttf") format("ttf")
+     url("./assets/fonts/YekanBakh/YekanBakh-Fat/YekanBakh-Fat.woff") format("woff")
+     ;
+
+}
+
+@font-face {
+    font-family: YekanBakh;
+    font-weight: 600;
+    src: url("./assets/fonts/YekanBakh/YekanBakh-Heavy/YekanBakh-Heavy.eot") format("eot") ,
+    url("./assets/fonts/YekanBakh/YekanBakh-Heavy/YekanBakh-Heavy.ttf") format("ttf") ,
+    url("./assets/fonts/YekanBakh/YekanBakh-Heavy/YekanBakh-Heavy.woff") format("woff")
+
+    ;
+}
+
+
+@font-face {
+    font-family: YekanBakh;
+    font-weight: 500;
+    src: url("./assets/fonts/YekanBakh/YekanBakh-Medium/YekanBakh-Medium.eot") format("eot") , 
+        url("./assets/fonts/YekanBakh/YekanBakh-Medium/YekanBakh-Medium.ttf") format("ttf") , 
+        url("./assets/fonts/YekanBakh/YekanBakh-Medium/YekanBakh-Medium.woff") format("woff") 
+
+}
+
+@font-face{
+    font-family: YekanBakh;
+    font-weight: 400;
+    src: url("./assets/fonts/YekanBakh/YekanBakh-Regular/YekanBakh-Regular.eot") format("eot") , 
+    url("./assets/fonts/YekanBakh/YekanBakh-Regular/YekanBakh-Regular.ttf") format("ttf")
+    url("./assets/fonts/YekanBakh/YekanBakh-Regular/YekanBakh-Regular.woff") format("woff")
+    ;
+}

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scrollbar-width:thin;
+  scrollbar-color: rgba(155,155,155,0.5) transparent;
+}
+
+#html{
+  overflow-x: hidden;
+}
+
+
+body{
+  font-family:YekanBakh;
+  font-weight:500;
+}
+
+
+
+
+
+.list::-webkit-scrollbar{
+width: 5px;
+}
+.list::-webkit-scrollbar-track{
+background: transparent;
+}
+.list::-webkit-scrollbar-thumb{
+background-color: rgba(155,155,155,0.5);
+border-radius: 20px;
+}

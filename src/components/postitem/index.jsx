@@ -5,6 +5,8 @@ import { FaRegCommentDots } from "react-icons/fa6"
 import { CiPlay1 } from "react-icons/ci"
 import { HiMiniArrowLongLeft } from "react-icons/hi2"
 import { Link , useLocation } from "react-router-dom"
+import {e2p} from "../../e2p"
+
 
 function PostItem({post}){
     return(
@@ -30,9 +32,9 @@ function PostItem({post}){
                 {/* {actions} */}
                     <div className="w-full flex justify-between items-center  px-3 mt-10">
                         <div className="hidden invisible  lg:flex lg:visible">
-                            <Col count="6" icon={<IoIosHeartEmpty/>}/>
-                            <Col count="12" icon={<BsDownload/>}/>
-                            <Col count="0" icon={<FaRegCommentDots/>}/>
+                            <Col count={e2p("6")} icon={<IoIosHeartEmpty/>}/>
+                            <Col count={e2p("12")} icon={<BsDownload/>}/>
+                            <Col count={e2p("0")} icon={<FaRegCommentDots/>}/>
 
                         </div>
 

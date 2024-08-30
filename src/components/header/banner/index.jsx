@@ -1,7 +1,6 @@
 import Card from "./Card"
 import { useMusicPlayer } from "../../../context/MusicPlayerProvider"
 
-
 const src="https://bir-music.com/wp-content/uploads/2024/07/Ehsan Daryadel - Pas Farda-170x170.jpg"
 function Banner(){
    const {songs} = useMusicPlayer()

@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { e2p } from "../../../e2p"
 import { IoIosHeartEmpty } from "react-icons/io"
 import { IoMdHeart } from "react-icons/io"
 import { CiPlay1 } from "react-icons/ci"
@@ -6,24 +7,27 @@ import { CiPause1 } from "react-icons/ci"
 import { BsDownload } from "react-icons/bs"
 import { useMusicPlayer } from "../../../context/MusicPlayerProvider"
 
-function Card({ img, name , artist , id , liked , downloaded}){
+function Card({ img, name , artist , id , liked , downloaded}){ 
     const { isPlay , setIsPlay , audioRef , setCurrentSong , songs , currentSong} = useMusicPlayer()
   
+    const downloadedcount = e2p(downloaded) 
+    const likedcount = e2p(liked)
+
     const songHandler = ()=>{
-        
-        const selectedSong = songs.filter(item=> item.id  === id)
+
+        const selectedSong = songs.filter(item=> item.id  == id)
         setCurrentSong(selectedSong[0]) 
-        
+        setIsPlay(false)
         if(!isPlay){   
                    
             audioRef.current.play()
-            setIsPlay(true)
+            setIsPlay(!isPlay)
         }else{
             audioRef.current.pause()
-            setIsPlay(false)
+            setIsPlay(!isPlay)
         }
     }
-    console.log(audioRef)
+    
     return(
         <div className="w-full sm:w-[48%] md:w-[32%] lg:w-[19%] mx-1 mb-7 py-2 px-2 rounded-xl border border-[#e9e9e9]"> 
            
@@ -34,7 +38,7 @@ function Card({ img, name , artist , id , liked , downloaded}){
                 <div className="flex flex-col items-center  w-1/3">
                     <IoIosHeartEmpty /> 
                     <span className="mt-2 text-sm">
-                        {liked}
+                        {likedcount}
                     </span>
                 </div>
 
@@ -48,7 +52,7 @@ function Card({ img, name , artist , id , liked , downloaded}){
                 <div className="flex flex-col items-center w-1/3">
                  <BsDownload />
                  <span className="mt-2 text-sm">
-                    {downloaded}
+                 {downloadedcount}
                  </span>
                 </div>
             </div>

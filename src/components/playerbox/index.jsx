@@ -1,19 +1,37 @@
-import { useEffect , useState } from "react"
+import { useEffect , useState , useRef  } from "react"
 import { TbPlayerSkipForward } from "react-icons/tb"
 import { TbPlayerSkipBack } from "react-icons/tb"
 import { CiPlay1 } from "react-icons/ci"
 import { CiPause1 } from "react-icons/ci"
 import { useMusicPlayer } from "../../context/MusicPlayerProvider"
+import { e2p } from "../../e2p"
+
+
 
 function PlayerBox(){
-    const { currentSong , audioRef , isPlay , setIsPlay } = useMusicPlayer()
-   
+    const { currentSong , setCurrentSong ,audioRef , isPlay , setIsPlay , songs } = useMusicPlayer()
+    const checkFirstRender = useRef(true);
+    console.log(audioRef)
+    // useEffect(()=>{
+    //     setIsPlay(false)
+    // },[])
+
     useEffect(()=>{
-        if(!isPlay){
-           audioRef.current.play()
-           setIsPlay(true)
-           
-        }
+        // skip first render useEffect
+        if (checkFirstRender.current) {
+            checkFirstRender.current = false;
+            return;
+          }
+        // skip first render useEffect
+
+        // if(!isPlay){
+        //    audioRef.current.play()           
+            // setIsPlay(true)
+        // }
+        audioRef.current.play()           
+        setIsPlay(true)
+
+      
 
     },[currentSong])
     const [info , setInfo] = useState({
@@ -29,9 +47,35 @@ function PlayerBox(){
     }
 
     const timeFormater = (time)=>{
-        return   Math.floor( time / 60 ) + ":" + ("0" + Math.floor(time % 60)).slice(-2)
+        const  result =   Math.floor( time / 60 ) + ":" + ("0" + Math.floor(time % 60)).slice(-2)
+        return e2p(result)
+    }
+    const skipForward = (currentSong , songs )=>{
+        let selectedId = currentSong.id 
+        if(selectedId < songs.length){
+            selectedId++
+           const selectedSong = songs.filter(item=> item.id == selectedId)
+           setCurrentSong(selectedSong[0])
+           setIsPlay(false)
+           audioRef.current.play()
+           setIsPlay(false)
+        }
     }
 
+    const skipBack = (currentSong , songs )=>{
+        let selectedId  = currentSong.id
+      
+        if(selectedId > 1){
+         selectedId--
+         const selectedSong = songs.filter(item=> item.id === selectedId)
+         setCurrentSong(selectedSong[0])
+         setIsPlay(false)
+         audioRef.current.play()
+         setIsPlay(false)
+        }else{
+            return
+        }
+    }
 
     return(
         <div className="fixed w-[82%] left-[9%] right-[9%] shadow-xl bottom-10 bg-white/85 flex justify-between py-2.5  px-6 rounded-lg ">
@@ -41,7 +85,7 @@ function PlayerBox(){
                     <h3 className="text-bold text-base ">
                         {currentSong.name}
                     </h3>
-                    <span className="font-[200]  text-sm">
+                    <span className="fat text-sm text-gray-600">
                       {currentSong.artist}
                     </span>
                 </div>
@@ -52,13 +96,13 @@ function PlayerBox(){
                 <div className="flex items-center font-[500]">
                     <div className="ml-3 h-full flex items-center  "><p>{timeFormater(info.currentTime)}</p></div>
                     <div className="w-max flex items-center font-[700]  [&>button]:mx-2.5">
-                        <button>
+                        <button onClick={()=>skipForward(currentSong , songs)}>
                             <TbPlayerSkipForward />
                         </button>
                          <PlayerButton 
                          audioRef={audioRef} isPlay={isPlay} setIsPlay={setIsPlay}/>
-                        <button>
-                        <TbPlayerSkipBack />
+                        <button onClick={()=>skipBack(currentSong , songs)}>
+                         <TbPlayerSkipBack />
                         </button>
                     </div>
                 </div>

@@ -16,11 +16,13 @@
 
 
 body{
-  font-family:YekanBakh;
-  font-weight:500;
+  font-family:YekanBakh-bold;
+  /* font-weight:500; */
 }
 
-
+.heavy{
+  font-family:'YekanBakh-heavy';
+}
 
 
 

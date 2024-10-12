@@ -1,6 +1,6 @@
 import PostItem from "../../postitem"
 import Pageination from "../../pageination"
-
+import { playList } from "../../../data" 
 
 function Main(){
     return(
@@ -8,17 +8,8 @@ function Main(){
             <h1 className="text-bold text-xl mt-4">آخرین ارسالی ها</h1>
        
             <div>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
+                {playList.map((item , index )=><PostItem key={index} post={item} />)}
+    
             </div>
             <Pageination />
             

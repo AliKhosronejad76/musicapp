@@ -1,5 +1,7 @@
 import { IoMdHeart } from "react-icons/io"
 import { BsDownload } from "react-icons/bs"
+import { e2p } from "../../../../e2p" 
+
 
 function Item({}){
     return(
@@ -14,12 +16,12 @@ function Item({}){
                 <div className="flex items-center mt-2  [&>div]:mx-3">
                     <div className="flex [&>span]:mr-2 text-gray-600 text-sm ">
                         <BsDownload />
-                        <span>5230</span>
+                        <span>{e2p(230)}</span>
                     </div>
 
                     <div className="flex [&>span]:mr-2 text-gray-600 text-sm ">
                         <IoMdHeart />
-                        <span>147</span>
+                        <span>{e2p(9147)}</span>
                     </div>
                 </div>
             </div>

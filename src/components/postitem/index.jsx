@@ -5,13 +5,15 @@ import { FaRegCommentDots } from "react-icons/fa6"
 import { CiPlay1 } from "react-icons/ci"
 import { HiMiniArrowLongLeft } from "react-icons/hi2"
 import { Link , useLocation } from "react-router-dom"
+import {e2p} from "../../e2p"
 
-function PostItem(){
+
+function PostItem({post}){
     return(
         <div className="w-full rounded-xl shadow-2xl px-2 py-4 my-6 flex flex-col md:flex-row ">
-            <img src={"/img/DjArash.jpg"} className="rounded-xl " />
+            <img src={post.img} className="rounded-xl " />
 
-            <div className="flex flex-col items-start mr-4">
+            <div className="w-full flex flex-col items-start mr-4">
                 <div className="flex items-center mt-5 md:mt-[0px] mb-5">
                      <a className="ml-5 bg-[#edf7fa] text-sm text-[#3ca5c8] px-2 py-1 rounded-lg">
                         دسته بندی
@@ -20,19 +22,19 @@ function PostItem(){
                 </div>
 
                 <div className="flex flex-col  mt-1">
-                    <h3 className="mb-1 text-bold">دانلود آهنگ دیجی آرش Never Stop</h3>
-                    <p className="text-sm text-gray-400">
-                    دانلود آهنگ جدید دیجی آرش به نام Never Stop Dj Arash - Never Stop دیجی آرش Never 
+                    <h3 className="mb-1 text-bold tracking-wider">آهنگ {post.name} {post.artis}</h3>
+                    <p className="text-sm text-gray-400 mt-1 tracking-wider">
+                        دانلود آهنگ {post.name} از {post.artist}
                     </p>
                 </div>
 
 
                 {/* {actions} */}
-                    <div className="w-full flex justify-between items-center  mt-10">
+                    <div className="w-full flex justify-between items-center  px-3 mt-10">
                         <div className="hidden invisible  lg:flex lg:visible">
-                            <Col count="6" icon={<IoIosHeartEmpty/>}/>
-                            <Col count="12" icon={<BsDownload/>}/>
-                            <Col count="0" icon={<FaRegCommentDots/>}/>
+                            <Col count={e2p("6")} icon={<IoIosHeartEmpty/>}/>
+                            <Col count={e2p("12")} icon={<BsDownload/>}/>
+                            <Col count={e2p("0")} icon={<FaRegCommentDots/>}/>
 
                         </div>
 
@@ -43,8 +45,8 @@ function PostItem(){
                         </button>
 
                         <a href="#" className="flex  items-center lg:mr-4 text-gray-900 duration-400 transition hover:text-gray-700">
-                            <span className="text-sm ">ادامه و دانلود</span>
-                            <HiMiniArrowLongLeft className="mr-2"/>
+                            <span className="text-sm ml-1.5">ادامه و دانلود</span>
+                            <HiMiniArrowLongLeft className=""/>
                         </a>
 
                       </div>

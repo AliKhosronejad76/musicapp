@@ -3,13 +3,10 @@
     src: url("./assets/fonts/Narm.ttf") format("ttf");
 }
 
-.na{
-    font-family:narm !important;
-    font-weight: 900;
-}
+
 
 @font-face {
-    font-family: YekanBakh;
+    font-family: 'YekanBakh-bold';
     font-weight: 700;
     src: url("./assets/Fonts/YekanBakh/YekanBakh-Bold/YekanBakh-Bold.eot") format("eot") ,
     url("./assets/fonts/YekanBakh/YekanBakh-Bold/YekanBakh-Bold.ttf") format("ttf") , 
@@ -17,7 +14,7 @@
 }
 
 @font-face {
-    font-family: YekanBakh;
+    font-family: 'YekanBakh-fat';
     font-weight:800;
     src: url("./assets/fonts/YekanBakh/YekanBakh-Fat/YekanBakh-Fat.eot") format("eot") , 
      url("./assets/fonts/YekanBakh/YekanBakh-Fat/YekanBakh-Fat.ttf") format("ttf")
@@ -27,7 +24,7 @@
 }
 
 @font-face {
-    font-family: YekanBakh;
+    font-family: 'YekanBakh-heavy';
     font-weight: 600;
     src: url("./assets/fonts/YekanBakh/YekanBakh-Heavy/YekanBakh-Heavy.eot") format("eot") ,
     url("./assets/fonts/YekanBakh/YekanBakh-Heavy/YekanBakh-Heavy.ttf") format("ttf") ,
@@ -38,7 +35,7 @@
 
 
 @font-face {
-    font-family: YekanBakh;
+    font-family: 'YekanBakh-medium';
     font-weight: 500;
     src: url("./assets/fonts/YekanBakh/YekanBakh-Medium/YekanBakh-Medium.eot") format("eot") , 
         url("./assets/fonts/YekanBakh/YekanBakh-Medium/YekanBakh-Medium.ttf") format("ttf") , 
@@ -47,8 +44,8 @@
 }
 
 @font-face{
-    font-family: YekanBakh;
-    font-weight: 400;
+    font-family:'YekanBakh-reg';
+    /* font-weight: 400; */
     src: url("./assets/fonts/YekanBakh/YekanBakh-Regular/YekanBakh-Regular.eot") format("eot") , 
     url("./assets/fonts/YekanBakh/YekanBakh-Regular/YekanBakh-Regular.ttf") format("ttf")
     url("./assets/fonts/YekanBakh/YekanBakh-Regular/YekanBakh-Regular.woff") format("woff")

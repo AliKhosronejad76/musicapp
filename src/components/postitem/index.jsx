@@ -11,7 +11,10 @@ import {e2p} from "../../e2p"
 function PostItem({post}){
     return(
         <div className="w-full rounded-xl shadow-2xl px-2 py-4 my-6 flex flex-col md:flex-row ">
-            <img src={post.img} className="rounded-xl " />
+            <Link to="/123">
+             <img src={post.img} className="rounded-xl " />
+            </Link>
+            
 
             <div className="w-full flex flex-col items-start mr-4">
                 <div className="flex items-center mt-5 md:mt-[0px] mb-5">
@@ -23,9 +26,9 @@ function PostItem({post}){
 
                 <div className="flex flex-col  mt-1">
                     <h3 className="mb-1 text-bold tracking-wider">آهنگ {post.name} {post.artis}</h3>
-                    <p className="text-sm text-gray-400 mt-1 tracking-wider">
+                    <Link to="/123" className="text-sm text-gray-400 mt-1 tracking-wider">
                         دانلود آهنگ {post.name} از {post.artist}
-                    </p>
+                    </Link>
                 </div>
 
 
@@ -44,10 +47,10 @@ function PostItem({post}){
                           <CiPlay1 />
                         </button>
 
-                        <a href="#" className="flex  items-center lg:mr-4 text-gray-900 duration-400 transition hover:text-gray-700">
+                        <Link to="/123" className="flex  items-center lg:mr-4 text-gray-900 duration-400 transition hover:text-gray-700">
                             <span className="text-sm ml-1.5">ادامه و دانلود</span>
                             <HiMiniArrowLongLeft className=""/>
-                        </a>
+                        </Link>
 
                       </div>
                     </div>

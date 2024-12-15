@@ -13,7 +13,7 @@ function Single(){
         const setMusic = ()=>{
             const music = playList.filter(music=> music.id == id)
             console.log(`music == ${music} `)
-            setMusicData(music)
+            setMusicData(music[1])
         }
         setMusic()
         console.log(musicData)

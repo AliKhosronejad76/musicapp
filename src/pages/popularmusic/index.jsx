@@ -1,6 +1,6 @@
 import Pageination from "../../components/pageination"
 import PostItem from "../../components/postitem"
-import {playeList} from "../../data.js"
+import {playList} from "../../data.js"
 
 
 function PopularMusic(){

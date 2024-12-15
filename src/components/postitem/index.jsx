@@ -11,7 +11,7 @@ import {e2p} from "../../e2p"
 function PostItem({post}){
     return(
         <div className="w-full rounded-xl shadow-2xl px-2 py-4 my-6 flex flex-col md:flex-row ">
-            <Link to="/123">
+            <Link to={`/${post.id}`}>
              <img src={post.img} className="rounded-xl " />
             </Link>
             
@@ -26,7 +26,7 @@ function PostItem({post}){
 
                 <div className="flex flex-col  mt-1">
                     <h3 className="mb-1 text-bold tracking-wider">آهنگ {post.name} {post.artis}</h3>
-                    <Link to="/123" className="text-sm text-gray-400 mt-1 tracking-wider">
+                    <Link to={`/${post.id}`} className="text-sm text-gray-400 mt-1 tracking-wider">
                         دانلود آهنگ {post.name} از {post.artist}
                     </Link>
                 </div>

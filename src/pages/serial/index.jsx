@@ -1,5 +1,5 @@
 import PostItem from "../../components/postitem"
-
+import {playList} from "../../data.js"
 function Serial(){
     return(
         <div className="w-full">
@@ -8,12 +8,7 @@ function Serial(){
           </h1>
 
           <div>
-            <PostItem/>
-            <PostItem/>
-            <PostItem/>
-            <PostItem/>
-            <PostItem/>
-            <PostItem/>
+          {playList.map((item , index )=><PostItem key={index} post={item} />)}
 
           </div>
         </div>

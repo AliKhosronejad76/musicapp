@@ -13,7 +13,7 @@ function Router(){
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/video" element={<Video/>}/>
-            <Route path={`/single/:id`} element={<Single/>}/>
+            <Route path={`/:id`} element={<Single/>}/>
             <Route path="/serial" element={<Serial/>}/>
             <Route path="/popularmusic" element={<PopularMusics/>}/>
             <Route path="/albums" element={<Albums/>}/>

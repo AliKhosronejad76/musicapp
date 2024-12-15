@@ -20,7 +20,7 @@ function Navbar(){
                 </button>
 
 
-                <button className="w-[40p] h-[40px] rounded-full mx-2">
+                <button className="w-[40p] h-[40px] rounded-full mx-2 bg-transparent">
                  <RiSearchLine />
                 </button>
             </div>
@@ -31,7 +31,8 @@ function Navbar(){
 
 function DrawerButton(){
     return(
-        <button className="md:hidden flex items-center justify-center text-2xl text-gray-700">
+        <button className=" md:hidden flex items-center justify-center text-2xl text-gray-700 bg-transparent    text-gray-700">
+           
             <RxHamburgerMenu/>
         </button>
     )

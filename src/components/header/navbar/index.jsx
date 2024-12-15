@@ -14,7 +14,7 @@ function Navbar(){
             </div>
             <Logo/>
             <div className="flex items-center h-full">
-                <button className="w-max h-[32px] mx-1 px-2 border border-[#3200c0] text-[#3200c0] flex items-center justify-between trasnition duration-300 hover:bg-[#3200c0] hover:text-white rounded-xl font-bold hover:[&>svg]:text-white">
+                <button className="bg-transparent w-max h-[32px] mx-1 px-2 border border-[#3200c0] text-[#3200c0] flex items-center justify-between trasnition duration-300 hover:bg-[#3200c0] hover:text-white rounded-xl font-bold hover:[&>svg]:text-white">
                     <span className="hidden sm:block text-sm ml-3"> پخش آهنگ </span>
                     <FiPhone className=""/>
                 </button>

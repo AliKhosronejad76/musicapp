@@ -30,7 +30,7 @@ function MusicPost({ music }){
             
             </div>   
 
-            <h1 className="text-right text-bold my-7">أدانلود آهنگ {music.artist} {music.name}</h1>     
+            <h1 className="text-right text-bold my-7">دانلود آهنگ {music.artist} {music.name}</h1>     
         {/* {img} */}
             <div className="relative">
                 <img src={music.cover} alt="" className="rounded-lg mb-3 relative mx-auto"/>
@@ -44,10 +44,10 @@ function MusicPost({ music }){
         {/* ing */}
         {/* text & description */}
         <div className="mx-auto text-center my-10">
-            <p className="text-base mb-1">دانلود آهنگ جدید اشکان هاشمی به نام گل گندم</p>
+            <p className="text-base mb-1">دانلود آهنگ جدید {music.artist} به نام {music.name}</p>
             <p className="text-sm mb-1">Ashkan Hashemi – Gole Gandom</p>
-            <p className="text-bold text-sm mb-1">اشکان هاشمی گل گندم</p>
-            <p className="text-sm">هم اکنون موزیک گل گندم از اشکان هاشمی را دانلود و گوش دهید</p>
+            <p className="text-bold text-sm mb-1">{music.artist}{music.name}</p>
+            <p className="text-sm">هم اکنون موزیک  {music.name} از {music.artist} را دانلود و گوش دهید</p>
             <p className="text-sm">با تو چشم مردمم بیا یه چشم نظر بدم بهت بندازی دور گردنت</p>
         </div>
         {/* text & description */}

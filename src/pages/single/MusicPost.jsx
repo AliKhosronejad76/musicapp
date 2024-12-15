@@ -30,7 +30,7 @@ function MusicPost({ music }){
             
             </div>   
 
-            <h1 className="text-right text-bold my-7">أانلود آهنگ اشکان هاشمی گل گندم</h1>     
+            <h1 className="text-right text-bold my-7">أدانلود آهنگ {music.artist} {music.name}</h1>     
         {/* {img} */}
             <div className="relative">
                 <img src={music.cover} alt="" className="rounded-lg mb-3 relative mx-auto"/>

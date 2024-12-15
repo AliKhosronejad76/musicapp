@@ -12,6 +12,7 @@ function Single(){
     useEffect(()=>{
         const setMusic = ()=>{
             const music = playList.filter(music=> music.id == id)
+            console.log(`music == ${music} `)
             setMusicData(music)
         }
         setMusic()
@@ -21,7 +22,7 @@ function Single(){
         <div className="flex flex-col md:flex-row justify-between">
             <h1 className="text-7xl"> {id}</h1>
             <div className="w-full md:w-[70%]">
-                <MusicPost/>
+                <MusicPost music={musicData}/>
                 {/* more post box */}
                 <Comments />
             </div>

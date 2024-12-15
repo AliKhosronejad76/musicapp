@@ -20,7 +20,6 @@ function Single(){
     },[id])
     return(
         <div className="flex flex-col md:flex-row justify-between">
-            <h1 className="text-7xl"> {id}</h1>
             <div className="w-full md:w-[70%]">
                 <MusicPost music={musicData}/>
                 {/* more post box */}

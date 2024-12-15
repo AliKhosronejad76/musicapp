@@ -1,5 +1,7 @@
 import Pageination from "../../components/pageination"
 import PostItem from "../../components/postitem"
+import {playeList} from "../../data.js"
+
 
 function PopularMusic(){
     return(
@@ -8,15 +10,7 @@ function PopularMusic(){
              آهنگ های پرطرفدار 
            </h1>
            <div>    
-            <PostItem/>
-            <PostItem/>
-            <PostItem/>
-            <PostItem/>
-            <PostItem/>
-            <PostItem/>
-            <PostItem/>
-
-
+              {playList.map((item , index )=><PostItem key={index} post={item} />)}
            </div>
            <Pageination/>
         </div>

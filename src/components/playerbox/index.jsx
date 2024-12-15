@@ -96,12 +96,12 @@ function PlayerBox(){
                 <div className="flex items-center font-[500]">
                     <div className="ml-3 h-full flex items-center  "><p>{timeFormater(info.currentTime)}</p></div>
                     <div className="w-max flex items-center font-[700]  [&>button]:mx-2.5">
-                        <button onClick={()=>skipForward(currentSong , songs)}>
+                        <button  className="bg-transparent" onClick={()=>skipForward(currentSong , songs)}>
                             <TbPlayerSkipForward />
                         </button>
                          <PlayerButton 
                          audioRef={audioRef} isPlay={isPlay} setIsPlay={setIsPlay}/>
-                        <button onClick={()=>skipBack(currentSong , songs)}>
+                        <button  className="bg-transparent" onClick={()=>skipBack(currentSong , songs)}>
                          <TbPlayerSkipBack />
                         </button>
                     </div>

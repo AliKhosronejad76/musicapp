@@ -46,7 +46,7 @@ function MusicPost({ music }){
         <div className="mx-auto text-center my-10">
             <p className="text-base mb-1">دانلود آهنگ جدید {music.artist} به نام {music.name}</p>
             <p className="text-sm mb-1">Ashkan Hashemi – Gole Gandom</p>
-            <p className="text-bold text-sm mb-1">{music.artist}{music.name}</p>
+            <p className="text-bold text-sm mb-1">{music.artist} {music.name}</p>
             <p className="text-sm">هم اکنون موزیک  {music.name} از {music.artist} را دانلود و گوش دهید</p>
             <p className="text-sm">با تو چشم مردمم بیا یه چشم نظر بدم بهت بندازی دور گردنت</p>
         </div>

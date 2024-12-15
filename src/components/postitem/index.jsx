@@ -47,7 +47,7 @@ function PostItem({post}){
                           <CiPlay1 />
                         </button>
 
-                        <Link to="/123" className="flex  items-center lg:mr-4 text-gray-900 duration-400 transition hover:text-gray-700">
+                        <Link to={`/${post.id}`} className="flex  items-center lg:mr-4 text-gray-900 duration-400 transition hover:text-gray-700">
                             <span className="text-sm ml-1.5">ادامه و دانلود</span>
                             <HiMiniArrowLongLeft className=""/>
                         </Link>

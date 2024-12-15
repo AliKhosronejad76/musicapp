@@ -10,7 +10,7 @@ import { PiDownloadSimple } from "react-icons/pi"
 import { FaRegComment } from "react-icons/fa"
 
 
-function MusicPost(){
+function MusicPost({ music }){
     const [liking , setliking] = useState(false)
     return(
         <div className="w-full bg-white rounded-xl shadow-lg p-4">
@@ -33,7 +33,7 @@ function MusicPost(){
             <h1 className="text-right text-bold my-7">أانلود آهنگ اشکان هاشمی گل گندم</h1>     
         {/* {img} */}
             <div className="relative">
-                <img src={"/img/artists/post-01.jpg"} alt="" className="rounded-lg mb-3 relative mx-auto"/>
+                <img src={music.cover} alt="" className="rounded-lg mb-3 relative mx-auto"/>
                <div className="w-full h-[45px] flex justify-center  absolute bottom-[-10px]">
                     <button className="flex justify-center items-center text-xl bg-white shadow-lg rounded-full w-[49px] h-[49px] transition duration-700 hover:bg-[#f1f1f1]">
                     <IoPlayOutline />

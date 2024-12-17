@@ -19,7 +19,7 @@ function PostItem({post}){
             <div className="w-full flex flex-col items-start mr-4">
                 <div className="flex items-center mt-5 md:mt-[0px] mb-5">
                      <a className="ml-5 bg-[#edf7fa] text-sm text-[#3ca5c8] px-2 py-1 rounded-lg">
-                        دسته بندی
+                        تک آهنگ
                      </a>
                     <p className="text-sm ">11 مرداد 1399</p>
                 </div>

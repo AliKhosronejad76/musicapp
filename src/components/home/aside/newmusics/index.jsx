@@ -1,4 +1,6 @@
-import { playList } from "../../../data.js"
+import {playList} from "../../../../data.js"
+
+
 
 function NewMusics(){
     return(

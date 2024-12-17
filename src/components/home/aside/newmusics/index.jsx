@@ -1,3 +1,5 @@
+import { playList } from "../../../data.js"
+
 function NewMusics(){
     return(
         <div className="w-full">
@@ -7,12 +9,9 @@ function NewMusics(){
 
             <ul className="w-full mb-5 px-3 py-1 mt-1 bg-[#1a035a] rounded-xl">
                 <Item name="دانلود آهنگ حامد اشرفی جوانی"/>
-                <Item name="دانلود آهنگ حامد اشرفی جوانی"/>
-                <Item name="دانلود آهنگ حامد اشرفی جوانی"/>
-                <Item name="دانلود آهنگ حامد اشرفی جوانی"/>
-                <Item name="دانلود آهنگ حامد اشرفی جوانی"/>
-                <Item name="دانلود آهنگ حامد اشرفی جوانی"/>
-                <Item name="دانلود آهنگ حامد اشرفی جوانی"/>
+                {
+                    playList.map((item)=><Item id={item.id} key={item.id} name={`دانلود آهنگ ${item.artist} ${item.name}`}/>)
+                }
                 
 
             
@@ -21,12 +20,12 @@ function NewMusics(){
     )
 }
 
-function Item({name}){
+function Item({ name , id }){
     return(
         <li className="my-3 py-1 px-2">
-            <a href="#" className="w-full block  text-sm text-white font-[500] transition duration-800 hover:font-[700]">
+            <Link href={`/${id}`} className="w-full block  text-sm text-white font-[500] transition duration-800 hover:font-[700]">
                 {name}
-            </a>
+            </Link>
         </li>
     )
 }
